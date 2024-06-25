@@ -23,7 +23,7 @@ int pop(){
 	}
 }
 
-int peek(){
+int display(){
 	int i;
 	if(top==-1){
 		printf("\nstack is empty\n");
@@ -53,7 +53,7 @@ void main(){
 				break;
 				
 			case 3:
-				peek();
+				display();
 				break;
 			default:
 				printf("Invalid choice\n");
