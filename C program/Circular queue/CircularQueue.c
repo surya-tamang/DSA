@@ -17,6 +17,7 @@ void enqueue()
     else
     {
         rear = (rear + 1) % max;
+        queue[rear] = item;
     }
 }
 
@@ -40,7 +41,7 @@ void dequeue()
 
 void display()
 {
-    int i=front;
+    int i = front;
     if (front == -1 && rear == -1)
     {
         printf("\nThe queue is empty");
