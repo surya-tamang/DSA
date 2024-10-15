@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class Merge {
 
-    public void combine(int arr[], int f, int mid, int l) {
+    public static void combine(int arr[], int f, int mid, int l) {
         // Create temporary arrays for left and right halves
 
         int leftSize = mid - f + 1;
@@ -54,7 +54,7 @@ public class Merge {
         }
     }
 
-    public void divide(int arr[], int f, int l) {
+    public static void divide(int arr[], int f, int l) {
         if (f < l) {
             int mid = (f + l) / 2;
             divide(arr, f, mid);
@@ -64,14 +64,13 @@ public class Merge {
     }
 
     public static void main(String[] args) {
-        Merge mergeSort = new Merge();
         int arr[] = { 88, 2, 1, 55, 45, 22, 35 };
         int max = arr.length;
 
         System.out.println("Before sorting:");
         System.out.println(Arrays.toString(arr));
 
-        mergeSort.divide(arr, 0, (max - 1));
+        divide(arr, 0, (max - 1));
 
         System.out.println("After sorting:");
         System.out.println(Arrays.toString(arr));
